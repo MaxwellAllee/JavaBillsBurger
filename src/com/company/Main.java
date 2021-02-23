@@ -3,7 +3,16 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
+        Hamburger hamburger = new Hamburger("Basic", "Sausage", 3.56, "White");
+        hamburger.addHamburgerAddition1("Tomato", 0.27);
+        hamburger.addHamburgerAddition2("Lettuce", 0.75);
+        hamburger.addHamburgerAddition3("Cheese", 1.13);
+        System.out.println("Total Burger price is " + hamburger.itemizeHamburger());
 
+
+        DeluxeBurger db = new DeluxeBurger();
+        db.addHamburgerAddition3("Should not do this", 50.53);
+        System.out.println("Total Deluxe Burger price is " + db.itemizeHamburger());
     }
 }
 //The purpose of this application is to help a company called Bill's Burgers manage the process of selling their
@@ -28,7 +37,8 @@ public class Main {
 //the fixings and chips and a drink for a base price of $19.10. The constructor can be configured in any way, as
 //long as chips and drink are added for the total price just mentioned. In this class, the four(4) methods defined
 //in the Hamburger class for including additional toppings must each be overridden so that a message is printed
-//stating that no additional items can be added to a deluxe burger.And for the third class, HealthyBurger, there
+//stating that no additional items can be added to a deluxe burger.
+// And for the third class, HealthyBurger, there
 //will be four(4) additional member variables called healthyExtra1Name, healthyExtra1Price, healthyExtra2Name, and
 //healthyExtra2Price. The names are type String and the prices are type double. The constructor for this class accepts
 //two(2) parameters for meat and price. Those are set in the constructor along with an appropriate name for the type
